@@ -12,7 +12,7 @@ DESCRIPTION="Extra Plasma applets and engines"
 LICENSE="GPL-2 LGPL-2"
 SLOT="5"
 KEYWORDS="*"
-IUSE="comic share webengine"
+IUSE="share webengine"
 
 RESTRICT+=" test" # bug 727846
 
@@ -42,7 +42,6 @@ DEPEND="
 	$(add_frameworks_dep kxmlgui)
 	$(add_frameworks_dep plasma)
 	$(add_frameworks_dep sonnet)
-	comic? ( $(add_frameworks_dep kross) )
 	share? ( $(add_frameworks_dep purpose) )
 	webengine? ( $(add_qt_dep qtwebengine) )
 "
@@ -52,13 +51,8 @@ RDEPEND="${DEPEND}
 	$(add_plasma_dep plasma-workspace)
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-5.19.3-kross-optional.patch" # downstream patch
-)
-
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_find_package comic KF5Kross)
 		$(cmake-utils_use_find_package share KF5Purpose)
 		$(cmake-utils_use_find_package webengine Qt5WebEngine)
 	)
