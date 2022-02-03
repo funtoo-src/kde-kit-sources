@@ -41,7 +41,7 @@ COMMON_DEPEND="
 	$(add_frameworks_dep kxmlgui)
 	kaccounts? (
 		$(add_kdeapps_dep kaccounts-integration)
-		net-libs/accounts-qt
+		>=net-libs/accounts-qt-1.16
 	)
 	mariadb? ( $(add_qt_dep qtsql mysql) )
 	sqlite? (
