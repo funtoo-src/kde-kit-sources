@@ -2,8 +2,8 @@
 
 EAPI=7
 
-FRAMEWORKS_MINIMAL=5.75.0
-QT_MINIMAL=5.15.1
+FRAMEWORKS_MINIMAL=5.98.0
+QT_MINIMAL=5.15.2
 inherit kde5
 
 DESCRIPTION="DNSSD (DNS Service Discovery - part of Rendezvous) ioslave and kded module"
