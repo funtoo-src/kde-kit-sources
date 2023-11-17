@@ -4,7 +4,7 @@ EAPI=7
 
 KDE_HANDBOOK="forceoptional"
 FRAMEWORKS_MINIMAL=5.98.0
-QT_MINIMAL=5.15.2
+QT_MINIMAL=5.12.3
 inherit kde5
 
 DESCRIPTION="A frontend to the subversion vcs"
@@ -16,6 +16,9 @@ SLOT="5"
 KEYWORDS="*"
 IUSE="+man"
 
+BDEPEND="
+	man? ( $(add_frameworks_dep kdoctools) )
+"
 DEPEND="
 	dev-libs/apr:1
 	dev-libs/apr-util:1
@@ -44,9 +47,10 @@ DEPEND="
 	$(add_frameworks_dep kwallet)
 	$(add_frameworks_dep kwidgetsaddons)
 	$(add_frameworks_dep kxmlgui)
-	man? ( $(add_frameworks_dep kdoctools) )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!kde-apps/kdesdk-kioslaves:4[subversion(-)]
+"
 
 src_prepare() {
 	kde5_src_prepare
