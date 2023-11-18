@@ -1,6 +1,7 @@
 lxqt_single_rule:
   defaults:
     cat: lxqt-base
+    lxqt_release: 1.4.0
     github:
       user: lxqt
       query: releases
@@ -8,48 +9,49 @@ lxqt_single_rule:
   generator: github-1
   packages:
     - liblxqt:
-        version: 1.3.0
+        version: 1.4.0
     - qterminal:
         cat: x11-terms
-        version: 1.3.0
+        version: 1.4.0
     - libqtxdg:
         cat: dev-libs
         version: 3.11.0
     - libsysstat
     - lximage-qt:
         cat: media-gfx
-        version: 1.3.0
+        version: 1.4.0
     - lxqt-build-tools:
         cat: dev-util
     - obconf-qt:
         cat: x11-misc
     - pavucontrol-qt:
         cat: media-sound
-        version: 1.3.0
+        version: 1.4.0
     - qps:
         cat: x11-misc
-        version: 2.7.0
+        version: 2.8.0
     - qtermwidget:
         cat: x11-libs
-        version: 1.3.0
+        version: 1.4.0
     - qtxdg-tools:
         cat: app-misc
-        version: 3.11.0
+        version: 3.12.0
     - screengrab:
         cat: x11-misc
-        version: 2.6.0
+        version: 2.7.0
 
 meta_rule:
   generator: simple
   packages:
     - lxqt-meta:
-        version: 1.3.0
+        version: 1.4.0
 
 lxqt_group_rule:
   defaults:
     cat: lxqt-base
+    lxqt_release: 1.4.0
     user: lxqt
-    version: 1.3.0
+    version: 1.4.0
     github:
       user: lxqt
       query: releases
@@ -72,5 +74,6 @@ lxqt_group_rule:
     - lxqt-sudo
     - lxqt-themes:
         cat: x11-themes
+        version: latest
     - pcmanfm-qt:
         cat: x11-misc
