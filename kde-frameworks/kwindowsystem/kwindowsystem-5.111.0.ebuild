@@ -17,7 +17,6 @@ BDEPEND="
 RDEPEND="
 	$(add_qt_dep qtgui)
 	$(add_qt_dep qtwidgets)
-	$(add_plasma_dep kwayland-integration)
 	X? (
 		$(add_qt_dep qtx11extras)
 		x11-libs/libX11

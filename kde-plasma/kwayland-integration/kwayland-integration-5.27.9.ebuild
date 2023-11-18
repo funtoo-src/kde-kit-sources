@@ -24,6 +24,7 @@ DEPEND="
 	$(add_qt_dep qtgui)
 	$(add_qt_dep qtwayland)
 	$(add_qt_dep qtwidgets)
+	$(add_frameworks_dep extra-cmake-modules)
 	$(add_frameworks_dep kguiaddons)
 	$(add_frameworks_dep kidletime)
 	$(add_frameworks_dep kwayland)
