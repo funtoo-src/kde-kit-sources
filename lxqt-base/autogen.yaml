@@ -42,6 +42,8 @@ lxqt_single_rule:
     - screengrab:
         cat: x11-misc
         version: 2.7.0
+    - lxqt-menu-data:
+        version: 1.4.0
 
 meta_rule:
   generator: simple
