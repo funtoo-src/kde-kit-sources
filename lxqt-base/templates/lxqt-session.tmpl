@@ -7,8 +7,6 @@ inherit cmake
 DESCRIPTION="LXQt Session Manager"
 HOMEPAGE="https://lxqt.github.io/"
 
-MY_PV="$(ver_cut 1-2)*"
-
 SRC_URI="{{src_uri}}"
 KEYWORDS="*"
 
@@ -30,7 +28,7 @@ DEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	kde-frameworks/kwindowsystem:5[X]
-	=lxqt-base/liblxqt-${MY_PV}
+	=lxqt-base/liblxqt-{{reqs.wildcard}}
 	x11-libs/libX11
 	x11-misc/xdg-user-dirs
 	udev? ( virtual/libudev )

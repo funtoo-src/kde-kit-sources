@@ -7,8 +7,6 @@ inherit cmake
 DESCRIPTION="LXQt quick launcher"
 HOMEPAGE="https://lxqt.github.io/"
 
-MY_PV="$(ver_cut 1-2)*"
-
 SRC_URI="{{src_uri}}"
 KEYWORDS="*"
 
@@ -28,8 +26,8 @@ DEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtxml:5
 	kde-frameworks/kwindowsystem:5
-	=lxqt-base/liblxqt-${MY_PV}
-	=lxqt-base/lxqt-globalkeys-${MY_PV}
+	=lxqt-base/liblxqt-{{reqs.wildcard}}
+	=lxqt-base/lxqt-globalkeys-{{reqs.wildcard}}
 "
 RDEPEND="${DEPEND}"
 

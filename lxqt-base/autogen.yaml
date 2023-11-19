@@ -1,70 +1,41 @@
-lxqt_single_rule:
+meta_rule:
+  generator: simple
+  defaults:
+    reqs:
+      majmin: '1.4'
+      wildcard: '1.4*'
+      libqtxdg: '>=dev-libs/libqtxdg-3.12.0'
+      qtxdg_tools: '>=app-misc/qtxdg-tools-3.12.0'
+  packages:
+    - lxqt-meta:
+        version: 1.4.0
+
+lxqt_track_1.4.x_rule:
   defaults:
     cat: lxqt-base
     lxqt_release: 1.4.0
     reqs:
+      majmin: '1.4'
+      wildcard: '1.4*'
       libqtxdg: '>=dev-libs/libqtxdg-3.12.0'
       qtxdg_tools: '>=app-misc/qtxdg-tools-3.12.0'
     github:
       user: lxqt
       query: releases
       tarball: '{github_repo}-{version}.tar.xz'
+      match: '(1\.4\.[0-9]+)'
   generator: github-1
   packages:
-    - liblxqt:
-        version: 1.4.0
+    - liblxqt
     - qterminal:
         cat: x11-terms
-        version: 1.4.0
-    - libqtxdg:
-        cat: dev-libs
-        version: 3.12.0
-    - libsysstat
     - lximage-qt:
         cat: media-gfx
-        version: 1.4.0
-    - lxqt-build-tools:
-        cat: dev-util
-    - obconf-qt:
-        cat: x11-misc
     - pavucontrol-qt:
         cat: media-sound
-        version: 1.4.0
-    - qps:
-        cat: x11-misc
-        version: 2.8.0
     - qtermwidget:
         cat: x11-libs
-        version: 1.4.0
-    - qtxdg-tools:
-        cat: app-misc
-        version: 3.12.0
-    - screengrab:
-        cat: x11-misc
-        version: 2.7.0
-    - lxqt-menu-data:
-        version: 1.4.0
-
-meta_rule:
-  generator: simple
-  packages:
-    - lxqt-meta:
-        version: 1.4.0
-
-lxqt_group_rule:
-  defaults:
-    cat: lxqt-base
-    lxqt_release: 1.4.0
-    user: lxqt
-    version: 1.4.0
-    github:
-      user: lxqt
-      query: releases
-    reqs:
-      libqtxdg: '>=dev-libs/libqtxdg-3.12.0'
-      qtxdg_tools: '>=app-misc/qtxdg-tools-3.12.0'
-  generator: github-1
-  packages:
+    - lxqt-menu-data
     - libfm-qt:
         cat: x11-libs
     - lxqt-about
@@ -80,8 +51,44 @@ lxqt_group_rule:
     - lxqt-runner
     - lxqt-session
     - lxqt-sudo
+    - pcmanfm-qt:
+        cat: x11-misc
+
+lxqt_oddball_versions:
+  defaults:
+    cat: lxqt-base
+    lxqt_release: 1.4.0
+    reqs:
+      majmin: '1.4'
+      wildcard: '1.4*'
+      libqtxdg: '>=dev-libs/libqtxdg-3.12.0'
+      qtxdg_tools: '>=app-misc/qtxdg-tools-3.12.0'
+    github:
+      user: lxqt
+      query: releases
+      tarball: '{github_repo}-{version}.tar.xz'
+  generator: github-1
+  packages:
+    - lxqt-build-tools:
+        cat: dev-util
+        version: latest
+    - libqtxdg:
+        cat: dev-libs
+        version: 3.12.0
+    - obconf-qt:
+        cat: x11-misc
+        version: 0.16.3
+    - qps:
+        cat: x11-misc
+        version: 2.8.0
+    - qtxdg-tools:
+        cat: app-misc
+        version: 3.12.0
+    - screengrab:
+        cat: x11-misc
+        version: 2.7.0
     - lxqt-themes:
         cat: x11-themes
         version: latest
-    - pcmanfm-qt:
-        cat: x11-misc
+    - libsysstat:
+        version: latest
