@@ -2,8 +2,6 @@
 
 EAPI=7
 
-MY_PV="$(ver_cut 1-2)"
-
 inherit cmake
 
 DESCRIPTION="LXQt Menu Files and Translations for Menu Categories"
@@ -16,7 +14,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 BDEPEND="
-	>=dev-util/lxqt-build-tools
+	dev-util/lxqt-build-tools
 	>=dev-qt/linguist-tools-5.15:5
 "
 RDEPEND="
