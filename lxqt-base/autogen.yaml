@@ -2,6 +2,9 @@ lxqt_single_rule:
   defaults:
     cat: lxqt-base
     lxqt_release: 1.4.0
+    reqs:
+      libqtxdg: '>=dev-libs/libqtxdg-3.12.0'
+      qtxdg_tools: '>=dev-libs/qtxdg-tools-3.12.0'
     github:
       user: lxqt
       query: releases
@@ -15,7 +18,7 @@ lxqt_single_rule:
         version: 1.4.0
     - libqtxdg:
         cat: dev-libs
-        version: 3.11.0
+        version: 3.12.0
     - libsysstat
     - lximage-qt:
         cat: media-gfx
@@ -55,6 +58,9 @@ lxqt_group_rule:
     github:
       user: lxqt
       query: releases
+    reqs:
+      libqtxdg: '>=dev-libs/libqtxdg-3.12.0'
+      qtxdg_tools: '>=dev-libs/qtxdg-tools-3.12.0'
   generator: github-1
   packages:
     - libfm-qt:
