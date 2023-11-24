@@ -72,6 +72,7 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DDISABLE_PIPEWIRE=$(usex !wayland)
 		$(cmake-utils_use_find_package wayland PipeWire)
 		$(cmake_use_find_package wayland PlasmaWaylandProtocols)
 		$(cmake_use_find_package wayland gbm)

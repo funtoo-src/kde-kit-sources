@@ -55,10 +55,10 @@ DEPEND="
 	$(add_frameworks_dep ktextwidgets)
 	$(add_frameworks_dep kwidgetsaddons)
 	$(add_frameworks_dep kxmlgui)
+	$(add_frameworks_dep purpose)
 	$(add_frameworks_dep solid)
 	>=media-libs/mlt-7.14.0[ffmpeg,frei0r,kdenlive(+),melt(+),qt5,sdl,xml]
 	semantic-desktop? ( $(add_frameworks_dep kfilemetadata) )
-	share? ( $(add_frameworks_dep purpose) )
 	v4l? ( media-libs/libv4l )
 "
 RDEPEND="${DEPEND}
@@ -71,7 +71,6 @@ RESTRICT+=" test" # segfaults, bug 684132
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_find_package semantic-desktop KF5FileMetaData)
-		$(cmake-utils_use_find_package share KF5Purpose)
 		$(cmake-utils_use_find_package v4l LibV4L2)
 	)
 

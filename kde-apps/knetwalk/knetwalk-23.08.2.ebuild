@@ -3,7 +3,6 @@
 EAPI=7
 
 KDE_HANDBOOK="forceoptional"
-KDE_TEST="optional"
 FRAMEWORKS_MINIMAL=5.98.0
 QT_MINIMAL=5.15.1
 VIRTUALX_REQUIRED="test"
@@ -20,6 +19,7 @@ IUSE=""
 DEPEND="
 	$(add_qt_dep qtdeclarative)
 	$(add_qt_dep qtgui)
+	$(add_qt_dep qttest)
 	$(add_qt_dep qtwidgets)
 	$(add_kdeapps_dep libkdegames)
 	$(add_frameworks_dep kconfig)

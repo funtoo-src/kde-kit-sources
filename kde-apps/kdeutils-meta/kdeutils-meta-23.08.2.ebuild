@@ -29,7 +29,7 @@ RDEPEND="
 	>=sys-block/partitionmanager-${PV}:${SLOT}
 	>=sys-libs/kpmcore-${PV}:${SLOT}
 	cups? ( >=kde-apps/print-manager-${PV}:${SLOT} )
-	floppy? ( >=kde-apps/kfloppy-${PV}:${SLOT} )
+	floppy? ( >=kde-apps/kfloppy-23.04.3:${SLOT} )
 	gpg? ( >=kde-apps/kgpg-${PV}:${SLOT} )
 	webengine? ( >=kde-apps/kimagemapeditor-${PV}:${SLOT} )
 "

@@ -11,17 +11,17 @@ KEYWORDS="*"
 IUSE=""
 
 RDEPEND="
-	>=kde-apps/ktp-accounts-kcm-${PV}:${SLOT}
-	>=kde-apps/ktp-approver-${PV}:${SLOT}
-	>=kde-apps/ktp-auth-handler-${PV}:${SLOT}
-	>=kde-apps/ktp-common-internals-${PV}:${SLOT}
-	>=kde-apps/ktp-contact-list-${PV}:${SLOT}
-	>=kde-apps/ktp-contact-runner-${PV}:${SLOT}
-	>=kde-apps/ktp-desktop-applets-${PV}:${SLOT}
-	>=kde-apps/ktp-filetransfer-handler-${PV}:${SLOT}
-	>=kde-apps/ktp-kded-module-${PV}:${SLOT}
-	>=kde-apps/ktp-send-file-${PV}:${SLOT}
-	>=kde-apps/ktp-text-ui-${PV}:${SLOT}
+	>=kde-apps/ktp-accounts-kcm-23.04.3:${SLOT}
+	>=kde-apps/ktp-approver-23.04.3:${SLOT}
+	>=kde-apps/ktp-auth-handler-23.04.3:${SLOT}
+	>=kde-apps/ktp-common-internals-23.04.3:${SLOT}
+	>=kde-apps/ktp-contact-list-23.04.3:${SLOT}
+	>=kde-apps/ktp-contact-runner-23.04.3:${SLOT}
+	>=kde-apps/ktp-desktop-applets-23.04.3:${SLOT}
+	>=kde-apps/ktp-filetransfer-handler-23.04.3:${SLOT}
+	>=kde-apps/ktp-kded-module-23.04.3:${SLOT}
+	>=kde-apps/ktp-send-file-23.04.3:${SLOT}
+	>=kde-apps/ktp-text-ui-23.04.3:${SLOT}
 "
 
 pkg_postinst() {

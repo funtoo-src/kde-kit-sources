@@ -8,7 +8,7 @@ VIRTUALX_REQUIRED="test"
 inherit kde5
 
 DESCRIPTION="KDE library for mathematical features"
-SRC_URI="https://download.kde.org/stable/release-service/22.08.1/src/analitza-22.08.1.tar.xz -> analitza-22.08.1.tar.xz"
+SRC_URI="https://download.kde.org/stable/release-service/${PV}/src/${P}.tar.xz -> ${P}.tar.xz"
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
 KEYWORDS="*"

@@ -48,5 +48,6 @@ DEPEND="
 	$(add_frameworks_dep kwallet)
 	$(add_frameworks_dep kwidgetsaddons)
 	$(add_frameworks_dep kxmlgui)
+	>=x11-misc/shared-mime-info-2.0
 "
 RDEPEND="${DEPEND}"
