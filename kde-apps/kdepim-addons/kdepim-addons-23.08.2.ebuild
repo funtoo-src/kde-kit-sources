@@ -17,7 +17,7 @@ IUSE="importwizard markdown"
 
 RDEPEND="
 	>=app-crypt/gpgme-1.16.0[cxx,qt5]
-	>=dev-libs/grantlee-5.2.0:i5
+	>=dev-libs/grantlee-5.2.0:5
 	dev-libs/ktextaddons
 	$(add_qt_dep qtgui)
 	$(add_qt_dep qtnetwork)
